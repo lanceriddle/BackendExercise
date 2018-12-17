@@ -1,8 +1,5 @@
 package com.intuit.cg.backendtechassessment.marketplace.model;
 
-import java.util.ArrayList;
-import java.util.List;
-
 // One of two Actors in the Marketplace.
 // The Seller (Employer) can:
 //      1. Post a new Project for hire.

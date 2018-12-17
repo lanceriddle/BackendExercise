@@ -1,0 +1,12 @@
+localhost:8080/sellers?sellerId=1&description=Project%201&maxBudget=10000&deadline=2019-05-31
+localhost:8080/sellers?sellerId=2&description=Project%202&maxBudget=1000&deadline=2018-12-31
+localhost:8080/sellers?sellerId=3&description=Project%203&maxBudget=30000&deadline=2019-03-03
+localhost:8080/sellers?sellerId=4&description=Project%204&maxBudget=100000&deadline=2019-02-01
+
+localhost:8080/projects
+
+localhost:8080/bids?buyerId=1&projectId=1&bidValue=1000
+localhost:8080/bids?buyerId=2&projectId=1&bidValue=500
+localhost:8080/bids?buyerId=2&projectId=3&bidValue=1000
+
+localhost:8080/projects

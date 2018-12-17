@@ -32,4 +32,12 @@ public class Bid {
     public Integer getAmount() {
         return amount;
     }
+
+    public String toString() {
+        return "Bid:{"
+                + "buyerID=" + buyerID
+                + ", projectID=" + projectID
+                + ", amount=" + amount
+                + "}";
+    }
 }

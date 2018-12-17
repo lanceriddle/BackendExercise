@@ -1,12 +1,7 @@
 package com.intuit.cg.backendtechassessment;
 
-import com.intuit.cg.backendtechassessment.services.ProjectService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import java.util.Date;
 
 /*
 	Domain Model Description:
@@ -49,15 +44,16 @@ import java.util.Date;
 
 // Implement CommandLineRunner so we can pre-populate the data quickly.
 @SpringBootApplication
-public class BackendTechAssessmentApplication implements CommandLineRunner {
+public class BackendTechAssessmentApplication /*implements CommandLineRunner*/ {
 
-	@Autowired
-	private ProjectService projectService;
+	//@Autowired
+	//private ProjectService projectService;
 
 	public static void main(String[] args) {
 		SpringApplication.run(BackendTechAssessmentApplication.class, args);
 	}
 
+	/*
 	// Populate the storage with some false default data for testing.
 	// GET localhost:8080/projects
 	// GET localhost:8080/projects/3
@@ -70,4 +66,5 @@ public class BackendTechAssessmentApplication implements CommandLineRunner {
 		projectService.createProject(5, "Project 5", 50000, new Date());
 		projectService.lookup().forEach(project -> System.out.println(project));
 	}
+	*/
 }

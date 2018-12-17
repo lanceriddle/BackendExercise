@@ -23,7 +23,7 @@ public class BackendTechAssessmentApplicationTests {
 	public void bidOnProject() {
 		// 1. Seller adds new project.
 		// 2. Buyer bids on project.
-		// 3. Seller retrieves project by ID and confirms buyer's bid is shown as lowest bid.
+		// 3. Retrieve project by ID and confirm buyer's bid is shown as lowest bid.
 	}
 
 	@Test
@@ -31,7 +31,7 @@ public class BackendTechAssessmentApplicationTests {
 		// 1. Seller adds new project.
 		// 2. Buyer 1 bids on project.
 		// 3. Buyer 2 bids a lower amount on project.
-		// 3. Seller retrieves project by ID and confirms buyer 2's bid is shown as lowest bid.
+		// 3. Retrieve project by ID and confirm Buyer 2's bid is shown as lowest bid.
 	}
 
 	@Test
@@ -39,14 +39,14 @@ public class BackendTechAssessmentApplicationTests {
 		// 1. Seller adds new project.
 		// 2. Buyer 1 bids on project.
 		// 3. Buyer 2 bids a higher amount on project.
-		// 3. Seller retrieves project by ID and confirms buyer 1's bid is shown as lowest bid.
+		// 3. Retrieve project by ID and confirm Buyer 1's bid is shown as lowest bid.
 	}
 
 	@Test
 	public void bidOverMaxOnProject() {
 		// 1. Seller adds new project.
 		// 2. Buyer bids on project with an amount greater than the defined maximum budget.
-		// 3. Seller retrieves project by ID and confirms buyer 1's bid is NOT shown as lowest bid.
+		// 3. Retrieve project by ID and confirm Buyer 1's bid is NOT shown as lowest bid.
 	}
 
 }
