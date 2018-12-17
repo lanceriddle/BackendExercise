@@ -15,6 +15,8 @@ public class Project {
     //@Column
     private Integer id;
 
+    private Integer sellerId;
+
     //@Column(length = 2000)
     private String description;
 
@@ -26,8 +28,9 @@ public class Project {
 
     private Bid lowestBid;
 
-    public Project(Integer id, String description, Integer maxBudget, Date deadlineForBids) {
+    public Project(Integer id, Integer sellerId, String description, Integer maxBudget, Date deadlineForBids) {
         this.id = id;
+        this.sellerId = sellerId;
         this.description = description;
         this.maxBudget = maxBudget;
         this.deadlineForBids = deadlineForBids;

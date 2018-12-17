@@ -2,6 +2,10 @@
 
 Skeleton project for Backend Technical Assessment.
 
+For Review
+----------
+- Added the class [BackendTechAssessmentController] which houses the code to handle REST endpoint calls.
+
 Includes
 --------
 - Maven - [pom.xml](pom.xml)

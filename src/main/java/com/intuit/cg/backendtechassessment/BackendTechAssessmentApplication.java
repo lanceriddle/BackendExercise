@@ -3,13 +3,20 @@ package com.intuit.cg.backendtechassessment;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-/*
+/**
+	Major Classes:
+
+		BackendTechAssessmentApplication.java - Main SpringBootApplication class.
+		BackendTechAssessmentController.java - Controller that handles the REST endpoint commands.
+		ProjectBoard.java - Maintains a HashMap of projects that have been posted by sellers and bid on by buyers.
+
+
 	Domain Model Description:
 
 		Actor: "Seller"
 		Member Variables:
 			+id
-			+projectIds (List of IDs of Projects this Seller has created).
+			+projectIds (List of IDs of Projects this Seller has created.)
 		Actions:
 			1. Post a Project.
 			2. Retrieve a Project by ID so it can determine the lowest Bid.
@@ -21,11 +28,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 			1. Get a list of available Projects.
 			2. Place a Bid on one or multiple Projects.
 
-		Object: "Project" (Instances of these objects will be persisted in the "ProjectRepository".
+		Object: "Project" (Instances of these objects will be persisted in the "ProjectRepository".)
 		Member Variables:
 			+id
 			+description
-			+maximumBudget
+			+maxBudget
 			+deadlineForBids
 			+lowestBid
 
@@ -35,23 +42,46 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 			+projectId (Which Project to apply this Bid to)
 			+amount
 
+		Object: "ProjectBoard" (The in-memory storage of Projects that have been posted by Sellers.)
+		Member Variables:
+			+instance
+            +projectHashMap
+            +nextAvailableId
+        Actions:
+            +getNewUniqueId()
+            +getAllProjectsAsList()
+            +getAllProjectsAsString()
+            +postProject()
+            +getProjectById()
+            +bidOnProjectById()
+
+
 	Technologies:
-		- Attempted to use Spring Data JPA (Java Persistent API) in order to take advantage of its built-in data storage and access features.
+		- Attempted to use Spring Data JPA (Java Persistent API) in order to take advantage of its built-in
+				data storage and access features.
 			- This was my first attempt learning this repository tool.
-		- ProjectRepository extends the CrudRepository because that provides the interface for many Save/Find/Delete/etc methods by default.
-		- Attempted to use Spring Boot and REST services, but this was also a first attempt in my experience.
+			- Based on time constraints, I defaulted back to an in-memory singleton ProjectBoard where jobs are
+				held in a HashMap.
+		- ProjectRepository was created and extended the CrudRepository because that provides the interface for many
+				Save/Find/Delete/etc methods by default.
  */
 
-// Implement CommandLineRunner so we can pre-populate the data quickly.
+// Implement CommandLineRunner so we can pre-populate the data quickly in the run() method.
 @SpringBootApplication
 public class BackendTechAssessmentApplication /*implements CommandLineRunner*/ {
-
-	//@Autowired
-	//private ProjectService projectService;
 
 	public static void main(String[] args) {
 		SpringApplication.run(BackendTechAssessmentApplication.class, args);
 	}
+
+
+
+
+
+
+
+	//@Autowired
+	//private ProjectService projectService;
 
 	/*
 	// Populate the storage with some false default data for testing.

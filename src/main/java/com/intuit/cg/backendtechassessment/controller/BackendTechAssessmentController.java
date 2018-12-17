@@ -29,15 +29,15 @@ final public class BackendTechAssessmentController {
     public static String DATE_PATTERN = "yyyy-MM-dd";
 
     /**
-     * Return a list of project.
+     * Return a list of project using the /projects endpoint.
      */
     @RequestMapping(RequestMappings.PROJECTS)
     public @ResponseBody String projects() {
-        return "Projects:\n" + ProjectBoard.getInstance().getAllProjectsString();
+        return "Projects:\n" + ProjectBoard.getInstance().getAllProjectsAsString();
     }
 
     /**
-     * Allow a seller to post a project.
+     * Allow a seller to post a project using the /sellers endpoint.
      */
     @RequestMapping(RequestMappings.SELLERS)
     public @ResponseBody String sellers(@RequestParam(value="sellerId") Integer sellerId,
@@ -45,32 +45,39 @@ final public class BackendTechAssessmentController {
                                         @RequestParam(value="maxBudget") Integer maxBudget,
                                         @RequestParam(value="deadline") String deadline) {
         try {
+            // Create a new Project instance and post it to the ProjectBoard.
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat(DATE_PATTERN);
-            Project project = new Project(ProjectBoard.getInstance().getNextAvailableId(),
-                    description, maxBudget, simpleDateFormat.parse(deadline));
+            Project project = new Project(ProjectBoard.getInstance().getNewUniqueId(),
+                    sellerId, description, maxBudget, simpleDateFormat.parse(deadline));
             ProjectBoard.getInstance().postProject(project);
         } catch (ParseException e) {
             e.printStackTrace();
             return "SELLERS ParseException";
         }
-        return "Existing Projects:\n" + ProjectBoard.getInstance().getAllProjectsString();
-    }
 
-    // TODO
-    @RequestMapping(RequestMappings.BUYERS)
-    public @ResponseBody String buyers() {
-        return "BUYERS";
+        // Return a list of the current Projects.
+        return "Existing Projects:\n" + ProjectBoard.getInstance().getAllProjectsAsString();
     }
 
     /**
-     * Place a bid on the specified project.
+     * Place a bid on the specified project using the /bids endpoint.
      */
     @RequestMapping(RequestMappings.BIDS)
     public @ResponseBody String bids(@RequestParam(value="buyerId") Integer buyerId,
                                      @RequestParam(value="projectId") Integer projectId,
                                      @RequestParam(value="bidValue") Integer bidValue) {
+        // Create a new Bid instance and post it to a Project on the ProjectBoard.
         Bid bid = new Bid(buyerId, projectId, bidValue);
-        ProjectBoard.getInstance().bidOnProjectById(projectId, bid);
-        return "Bid Placed: " + bid;
+        Project project = ProjectBoard.getInstance().bidOnProjectById(projectId, bid);
+
+        // Return the related Project to verify its current Bid.
+        return "Bid Placed: " + project;
+    }
+
+
+    // TODO: /buyers endpoint.
+    @RequestMapping(RequestMappings.BUYERS)
+    public @ResponseBody String buyers() {
+        return "BUYERS";
     }
 }

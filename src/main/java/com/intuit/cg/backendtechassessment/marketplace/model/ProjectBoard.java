@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
- * The structure storing the currently existing projects that are
+ * The collection of currently existing projects that are
  * available for bidding on.
  */
 public class ProjectBoard {
@@ -22,31 +22,35 @@ public class ProjectBoard {
         return instance;
     }
 
+    /**
+     * Don't allow the creation of instances by other classes.
+     */
     protected ProjectBoard() {
     }
 
     /**
      * Get the next available Project ID for a new Project.
      */
-    public synchronized Integer getNextAvailableId() {
+    public synchronized Integer getNewUniqueId() {
         return nextAvailableId++;
     }
 
     /**
      * Get all posted projects as a list.
      */
-    public ArrayList<Project> getAllProjectsList() {
+    public ArrayList<Project> getAllProjectsAsList() {
         return new ArrayList<Project>(projectHashMap.values());
     }
 
     /**
      * Get all posted projects as a string.
      */
-    public String getAllProjectsString() {
+    public String getAllProjectsAsString() {
         StringBuffer sb = new StringBuffer();
         for (Project proj : projectHashMap.values()) {
             sb.append(proj + "\n");
         }
+
         return sb.toString();
     }
 
@@ -69,11 +73,15 @@ public class ProjectBoard {
     /**
      * Let a Buyer bid on a project.
      */
-    public void bidOnProjectById(Integer projectId, Bid bid) {
+    public Project bidOnProjectById(Integer projectId, Bid bid) {
+        // TODO: handle the 'null' case to prevent exceptions.
         if(!projectHashMap.containsKey(projectId))
-            return;
+            return null;
 
+        // Retrieve the corresponding Project and post a Bid to it.
         Project project = projectHashMap.get(projectId);
         project.postBid(bid);
+
+        return project;
     }
 }
