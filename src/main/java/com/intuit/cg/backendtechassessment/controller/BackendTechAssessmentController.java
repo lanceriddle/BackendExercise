@@ -21,11 +21,11 @@ final public class BackendTechAssessmentController {
      */
     @RequestMapping(value = RequestMappings.PROJECTS, method = RequestMethod.GET) // "/projects"
     public @ResponseBody String projects() {
-        return "Projects:\n" + ProjectBoard.getInstance().getAllProjectsAsString();
+        return ProjectBoard.getInstance().getAllProjectsAsString();
     }
 
     /**
-     * /sellers endpoint.
+     * /sellers endpoint.  Using POST to CREATE a Project
      * Allow a seller to post a project.
      *
      * @param sellerId  The unique ID of the Seller.
@@ -39,31 +39,33 @@ final public class BackendTechAssessmentController {
                                         @RequestParam(value="description") String description,
                                         @RequestParam(value="maxBudget") Integer maxBudget,
                                         @RequestParam(value="deadline") String deadline) {
+        Integer projectId;
         try {
             // Create a new Project instance and post it to the ProjectBoard.
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat(DATE_PATTERN);
             Project project = new Project(ProjectBoard.getInstance().getNewUniqueId(),
                     sellerId, description, maxBudget, simpleDateFormat.parse(deadline));
             ProjectBoard.getInstance().postNewProject(project);
+            projectId = project.getId();
         } catch (ParseException e) {
             e.printStackTrace();
             return "SELLERS ParseException";
         }
 
         // Return a list of the current Projects.
-        return "Existing Projects:\n" + ProjectBoard.getInstance().getAllProjectsAsString();
+        return ProjectBoard.getInstance().getProjectById(projectId).toString();
     }
 
     /**
      * /bids endpoint.
-     * Place a bid on the specified project.
+     * Place a bid on the specified project.  Using PUT to UPDATE that bids on a Project.
      *
      * @param buyerId  The unique ID of the Buyer (Bidder).
      * @param projectId  The ID of the project to place a bid on.
      * @param bidValue  The value of the bid.
      * @return JSON-style description of the project that was bid on.
      */
-    @RequestMapping(value = RequestMappings.BIDS, method = RequestMethod.POST) // "/bids"
+    @RequestMapping(value = RequestMappings.BIDS, method = RequestMethod.PUT) // "/bids"
     public @ResponseBody String bids(@RequestParam(value="buyerId") Integer buyerId,
                                      @RequestParam(value="projectId") Integer projectId,
                                      @RequestParam(value="bidValue") Integer bidValue) {
@@ -72,7 +74,7 @@ final public class BackendTechAssessmentController {
         Project project = ProjectBoard.getInstance().bidOnProjectById(projectId, bid);
 
         // Return the related Project to verify its current Bid.
-        return "Bid Placed:\n" + project;
+        return project.toString();
     }
 
     /**

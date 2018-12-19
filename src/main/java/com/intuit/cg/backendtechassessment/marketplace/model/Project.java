@@ -64,7 +64,8 @@ public class Project {
      * @param bid  The Bid to be posted to this Project.
      */
     void postBid(Bid bid) {
-        if (bid.getAmount() > maxBudget)
+        // TODO: Report back that the value was too high.
+        if (bid == null || bid.getAmount() > maxBudget)
             return;
 
         if(lowestBid == null || lowestBid.getAmount() > bid.getAmount()) {

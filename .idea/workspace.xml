@@ -2,18 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f01ea645-124e-447a-b705-1408c3cf8716" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/intuit/cg/backendtechassessment/BackendTechAssessmentApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intuit/cg/backendtechassessment/BackendTechAssessmentApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample_commands.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sample_commands.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/intuit/cg/backendtechassessment/controller/BackendTechAssessmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intuit/cg/backendtechassessment/controller/BackendTechAssessmentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/intuit/cg/backendtechassessment/marketplace/model/Bid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intuit/cg/backendtechassessment/marketplace/model/Bid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/intuit/cg/backendtechassessment/marketplace/model/Buyer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intuit/cg/backendtechassessment/marketplace/model/Buyer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/intuit/cg/backendtechassessment/marketplace/model/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intuit/cg/backendtechassessment/marketplace/model/Project.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/intuit/cg/backendtechassessment/marketplace/model/ProjectBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intuit/cg/backendtechassessment/marketplace/model/ProjectBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/intuit/cg/backendtechassessment/marketplace/model/Seller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/intuit/cg/backendtechassessment/marketplace/model/Seller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/intuit/cg/backendtechassessment/repository/ProjectRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/intuit/cg/backendtechassessment/services/ProjectService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/intuit/cg/backendtechassessment/BackendTechAssessmentApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/intuit/cg/backendtechassessment/ProjectBoardTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/intuit/cg/backendtechassessment/ProjectBoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/intuit/cg/backendtechassessment/ProjectBoardTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,20 +33,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/intuit/cg/backendtechassessment/ProjectBoardTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="48" column="91" selection-start-line="48" selection-start-column="91" selection-end-line="48" selection-end-column="91" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="861">
-              <caret line="41" column="12" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
+            <state relative-caret-position="420">
+              <caret line="35" column="9" lean-forward="true" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -62,10 +45,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/intuit/cg/backendtechassessment/controller/BackendTechAssessmentController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="46" column="43" selection-start-line="46" selection-start-column="43" selection-end-line="46" selection-end-column="43" />
+            <state relative-caret-position="231">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#818#819#0" expanded="true" />
+                <element signature="e#892#893#0" expanded="true" />
                 <element signature="e#3160#3161#0" expanded="true" />
                 <element signature="e#3191#3192#0" expanded="true" />
               </folding>
@@ -76,10 +61,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/intuit/cg/backendtechassessment/marketplace/model/ProjectBoard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="77" column="38" lean-forward="true" selection-start-line="77" selection-start-column="38" selection-end-line="77" selection-end-column="38" />
+            <state relative-caret-position="235">
+              <caret line="64" column="15" selection-start-line="64" selection-start-column="11" selection-end-line="64" selection-end-column="15" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1587#1588#0" expanded="true" />
+                <element signature="e#1647#1648#0" expanded="true" />
                 <element signature="e#2608#2609#0" expanded="true" />
                 <element signature="e#2633#2634#0" expanded="true" />
               </folding>
@@ -96,11 +83,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/intuit/cg/backendtechassessment/marketplace/model/Project.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="84" column="59" selection-start-line="84" selection-start-column="59" selection-end-line="84" selection-end-column="59" />
+            <state relative-caret-position="540">
+              <caret line="67" column="27" selection-start-line="67" selection-start-column="27" selection-end-line="67" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -147,11 +134,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/intuit/cg/backendtechassessment/BackendTechAssessmentApplication.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/intuit/cg/backendtechassessment/BackendTechAssessmentApplicationTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/intuit/cg/backendtechassessment/ProjectBoardTests.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/intuit/cg/backendtechassessment/controller/BackendTechAssessmentController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/intuit/cg/backendtechassessment/marketplace/model/Bid.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/intuit/cg/backendtechassessment/marketplace/model/Project.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/intuit/cg/backendtechassessment/marketplace/model/ProjectBoard.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/intuit/cg/backendtechassessment/ProjectBoardTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/intuit/cg/backendtechassessment/controller/BackendTechAssessmentController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/intuit/cg/backendtechassessment/marketplace/model/Project.java" />
       </list>
     </option>
   </component>
@@ -285,7 +272,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545217086928" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545219218698" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Language Defaults" />
   </component>
   <component name="RecentsManager">
@@ -308,7 +295,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ProjectBoardTest">
+  <component name="RunManager" selected="Spring Boot.BackendTechAssessmentApplication">
     <configuration name="ProjectBoardTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="backend-tech-assessment-standard" />
       <extension name="coverage">
@@ -384,26 +371,11 @@
       <workItem from="1544506425103" duration="16853000" />
       <workItem from="1545027615106" duration="12671000" />
       <workItem from="1545069445596" duration="2829000" />
-      <workItem from="1545199606608" duration="15302000" />
+      <workItem from="1545199606608" duration="17433000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ProjectBoardTest_bidOnProjectById_SingleBid - 2018.12.19 at 02h 36m 13s.xml">
-      <configuration name="ProjectBoardTest.bidOnProjectById_SingleBid" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ProjectBoardTest_bidOnProjectById_SingleBid - 2018.12.19 at 02h 37m 54s.xml">
-      <configuration name="ProjectBoardTest.bidOnProjectById_SingleBid" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ProjectBoardTest_bidOnProjectById_SingleBid - 2018.12.19 at 02h 39m 48s.xml">
-      <configuration name="ProjectBoardTest.bidOnProjectById_SingleBid" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ProjectBoardTest_bidOnProjectById_SingleBid - 2018.12.19 at 02h 41m 10s.xml">
-      <configuration name="ProjectBoardTest.bidOnProjectById_SingleBid" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ProjectBoardTest_bidOnProjectById_SingleBid - 2018.12.19 at 02h 45m 08s.xml">
-      <configuration name="ProjectBoardTest.bidOnProjectById_SingleBid" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ProjectBoardTest_bidOnProjectById_SingleBid - 2018.12.19 at 02h 46m 04s.xml">
       <configuration name="ProjectBoardTest.bidOnProjectById_SingleBid" configurationId="JUnit" />
     </history-entry>
@@ -419,9 +391,24 @@
     <history-entry file="ProjectBoardTest - 2018.12.19 at 02h 58m 02s.xml">
       <configuration name="ProjectBoardTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ProjectBoardTest_postNewProject - 2018.12.19 at 03h 07m 26s.xml">
+      <configuration name="ProjectBoardTest.postNewProject" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ProjectBoardTest - 2018.12.19 at 03h 10m 03s.xml">
+      <configuration name="ProjectBoardTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ProjectBoardTest - 2018.12.19 at 03h 10m 37s.xml">
+      <configuration name="ProjectBoardTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ProjectBoardTest - 2018.12.19 at 03h 11m 15s.xml">
+      <configuration name="ProjectBoardTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ProjectBoardTest - 2018.12.19 at 03h 29m 01s.xml">
+      <configuration name="ProjectBoardTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53903000" />
+    <option name="totallyTimeSpent" value="56034000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -446,7 +433,7 @@
       <window_info id="Web" order="7" show_stripe_button="false" sideWeight="0.5012658" side_tool="true" weight="0.29695252" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32942164" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.35289186" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.35289186" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -573,18 +560,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/intuit/cg/backendtechassessment/controller/BackendTechAssessmentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="46" column="43" selection-start-line="46" selection-start-column="43" selection-end-line="46" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3160#3161#0" expanded="true" />
-            <element signature="e#3191#3192#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="861">
@@ -599,32 +574,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/intuit/cg/backendtechassessment/marketplace/model/Project.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/intuit/cg/backendtechassessment/controller/BackendTechAssessmentController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="84" column="59" selection-start-line="84" selection-start-column="59" selection-end-line="84" selection-end-column="59" />
+        <state relative-caret-position="231">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/intuit/cg/backendtechassessment/marketplace/model/ProjectBoard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="77" column="38" lean-forward="true" selection-start-line="77" selection-start-column="38" selection-end-line="77" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2608#2609#0" expanded="true" />
-            <element signature="e#2633#2634#0" expanded="true" />
+            <element signature="e#818#819#0" expanded="true" />
+            <element signature="e#892#893#0" expanded="true" />
+            <element signature="e#3160#3161#0" expanded="true" />
+            <element signature="e#3191#3192#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/intuit/cg/backendtechassessment/ProjectBoardTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="48" column="91" selection-start-line="48" selection-start-column="91" selection-end-line="48" selection-end-column="91" />
+        <state relative-caret-position="420">
+          <caret line="35" column="9" lean-forward="true" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/intuit/cg/backendtechassessment/marketplace/model/ProjectBoard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="64" column="15" selection-start-line="64" selection-start-column="11" selection-end-line="64" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1587#1588#0" expanded="true" />
+            <element signature="e#1647#1648#0" expanded="true" />
+            <element signature="e#2608#2609#0" expanded="true" />
+            <element signature="e#2633#2634#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/intuit/cg/backendtechassessment/marketplace/model/Project.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="67" column="27" selection-start-line="67" selection-start-column="27" selection-end-line="67" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

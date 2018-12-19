@@ -15,11 +15,15 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 @RunWith(JUnit4.class)
 @SpringBootTest
 public class ProjectBoardTest {
 
+	/**
+	 * Reinitialize the ProjectBoard before each test.
+	 */
 	@Before
 	public void resetProjectBoard() {
 		ProjectBoard.resetProjectBoardInstance();;
@@ -31,12 +35,6 @@ public class ProjectBoardTest {
 	 */
 	@Test
 	public void postNewProject() {
-		String expected = "\"Project\": {\n" +
-			"    \"id\": \"1\",\n" +
-			"    \"description\": \"Project 1\",\n" +
-			"    \"maxBudget\": \"10000\",\n" +
-			"    \"deadlineForBids\": \"2019-01-01\"\n" +
-			"}\n";
 
 		try {
 			// 1. Seller adds new project.
@@ -45,10 +43,16 @@ public class ProjectBoardTest {
 					1, "Project 1", 10000, simpleDateFormat.parse("2019-01-01"));
 			ProjectBoard.getInstance().postNewProject(postedProject);
 
-			// 2. Buyer Retrieves project list and confirms new project is included.
-			String projectListString = ProjectBoard.getInstance().getAllProjectsAsString();
+			// 2. Seller Retrieves project list and confirms new project is included.
+			Project retrievedProject = ProjectBoard.getInstance().getProjectById(1);
 
-			assertEquals(expected, projectListString);
+			assertNotNull(retrievedProject);
+			assertEquals((Integer)1, retrievedProject.getId());
+			assertEquals((Integer)1, retrievedProject.getSellerId());
+			assertEquals("Project 1", retrievedProject.getDescription());
+			assertEquals((Integer)10000, retrievedProject.getMaxBudget());
+			assertEquals(simpleDateFormat.parse("2019-01-01"), retrievedProject.getDeadlineForBids());
+
 		} catch (ParseException e) {
 		}
 	}
@@ -60,18 +64,6 @@ public class ProjectBoardTest {
 	 */
 	@Test
 	public void bidOnProjectById_SingleBid() {
-		String expected = "\"Project\": {\n" +
-				"    \"id\": \"1\",\n" +
-				"    \"description\": \"Project 1\",\n" +
-				"    \"maxBudget\": \"10000\",\n" +
-				"    \"deadlineForBids\": \"2019-01-01\"\n" +
-				"    \"lowestBid\":\n" +
-				"        \"Bid\": {\n" +
-			    "            \"buyerID\": \"1\",\n" +
-				"            \"projectID\": \"1\",\n" +
-				"            \"amount\": \"5000\"\n" +
-				"        }\n" +
-				"}";
 
 		try {
 			// 1. Seller adds new project.
@@ -84,9 +76,16 @@ public class ProjectBoardTest {
 			ProjectBoard.getInstance().bidOnProjectById(1, new Bid(1,1, 5000));
 
 			// 3. Retrieve project by ID and confirm buyer's bid is shown as lowest bid.
-			String projectString = ProjectBoard.getInstance().getProjectById(1).toString();
+			Project retrievedProject = ProjectBoard.getInstance().getProjectById(1);
 
-			assertEquals(expected, projectString);
+			assertNotNull(retrievedProject);
+			assertEquals((Integer)1, retrievedProject.getId());
+			assertEquals((Integer)1, retrievedProject.getSellerId());
+			assertEquals("Project 1", retrievedProject.getDescription());
+			assertEquals((Integer)10000, retrievedProject.getMaxBudget());
+			assertEquals(simpleDateFormat.parse("2019-01-01"), retrievedProject.getDeadlineForBids());
+			assertEquals((Integer)5000, retrievedProject.getLowestBid().getAmount());
+
 		} catch (ParseException e) {
 		}
 	}
