@@ -51,50 +51,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
             +getNewUniqueId()
             +getAllProjectsAsList()
             +getAllProjectsAsString()
-            +postProject()
+            +postNewProject()
             +getProjectById()
             +bidOnProjectById()
-
-
-	Technologies:
-		- Attempted to use Spring Data JPA (Java Persistent API) in order to take advantage of its built-in
-				data storage and access features.
-			- This was my first attempt learning this repository tool.
-			- Based on time constraints, I defaulted back to an in-memory singleton ProjectBoard where jobs are
-				held in a HashMap.
-		- ProjectRepository was created and extended the CrudRepository because that provides the interface for many
-				Save/Find/Delete/etc methods by default.
  */
 
-// Implement CommandLineRunner so we can pre-populate the data quickly in the run() method.
 @SpringBootApplication
-public class BackendTechAssessmentApplication /*implements CommandLineRunner*/ {
+public class BackendTechAssessmentApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(BackendTechAssessmentApplication.class, args);
 	}
-
-
-
-
-
-
-
-	//@Autowired
-	//private ProjectService projectService;
-
-	/*
-	// Populate the storage with some false default data for testing.
-	// GET localhost:8080/projects
-	// GET localhost:8080/projects/3
-	@Override
-	public void run(String... strings) throws Exception {
-		projectService.createProject(1, "Project 1", 10000, new Date());
-		projectService.createProject(2, "Project 2", 20000, new Date());
-		projectService.createProject(3, "Project 3", 30000, new Date());
-		projectService.createProject(4, "Project 4", 40000, new Date());
-		projectService.createProject(5, "Project 5", 50000, new Date());
-		projectService.lookup().forEach(project -> System.out.println(project));
-	}
-	*/
 }

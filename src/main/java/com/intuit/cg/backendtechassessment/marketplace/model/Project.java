@@ -1,31 +1,20 @@
 package com.intuit.cg.backendtechassessment.marketplace.model;
 
-import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-// A Project can be Created by a Seller (Employer).
-// A Project can be Bid on by a Buyer (Self-Employed).
-// See BackendTechAssessmentApplication.java for a description of the domain model.
-//@Entity
+/**
+ * A Project can be Created by a Seller (Employer).
+ * A Project can be Bid on by a Buyer (Self-Employed).
+  */
 public class Project {
     public static String DATE_PATTERN = "yyyy-MM-dd";
 
-    //@Id
-    //@Column
     private Integer id;
-
     private Integer sellerId;
-
-    //@Column(length = 2000)
     private String description;
-
-    //@Column
     private Integer maxBudget;
-
-    //@Column
     private Date deadlineForBids;
-
     private Bid lowestBid;
 
     public Project(Integer id, Integer sellerId, String description, Integer maxBudget, Date deadlineForBids) {
@@ -36,6 +25,7 @@ public class Project {
         this.deadlineForBids = deadlineForBids;
     }
 
+    // NOTE: Don't allow creating empty Project instances.
     protected Project() {
     }
 
@@ -59,7 +49,21 @@ public class Project {
         return lowestBid;
     }
 
-    public void postBid(Bid bid) {
+    public Integer getSellerId() {
+        return sellerId;
+    }
+
+    public void setSellerId(Integer sellerId) {
+        this.sellerId = sellerId;
+    }
+
+    /**
+     * Post a bid to this project.
+     * NOTE: Package-private access.
+     *
+     * @param bid  The Bid to be posted to this Project.
+     */
+    void postBid(Bid bid) {
         if (bid.getAmount() > maxBudget)
             return;
 
@@ -68,14 +72,17 @@ public class Project {
         }
     }
 
+    /**
+     * Return JSON-style formatted string of the Project.
+     */
     public String toString() {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat(DATE_PATTERN);
-        return "Project:{"
-                + "id=" + id
-                + ", description=" + description
-                + ", maxBudget=" + maxBudget
-                + ", deadlineForBids=" + simpleDateFormat.format(deadlineForBids)
-                + (lowestBid!=null ? (", lowestBid=" + lowestBid) : "")
-                + "}";
+        return "\"Project\": {\n"
+                + "    \"id\": \"" + id + "\",\n"
+                + "    \"description\": \"" + description + "\",\n"
+                + "    \"maxBudget\": \"" + maxBudget + "\",\n"
+                + "    \"deadlineForBids\": \"" + simpleDateFormat.format(deadlineForBids) + "\""
+                + (lowestBid!=null ? ("\n    \"lowestBid\":" + lowestBid) : "")
+                + "\n}";
     }
 }

@@ -1,7 +1,8 @@
 package com.intuit.cg.backendtechassessment.marketplace.model;
 
-// A Bid can be placed by a Buyer onto a Project.
-// See BackendTechAssessmentApplication.java for a description of the domain model.
+/**
+ * A Bid that can be placed by a Buyer onto a Project.
+ */
 public class Bid {
 
     // The ID of the Buyer who placed it.
@@ -33,11 +34,14 @@ public class Bid {
         return amount;
     }
 
+    /**
+     * JSON-style formatted string of the Bid.
+     */
     public String toString() {
-        return "Bid:{"
-                + "buyerID=" + buyerID
-                + ", projectID=" + projectID
-                + ", amount=" + amount
-                + "}";
+        return "\n        \"Bid\": {\n"
+                + "            \"buyerID\": \"" + buyerID + "\",\n"
+                + "            \"projectID\": \"" + projectID + "\",\n"
+                + "            \"amount\": \"" + amount + "\"\n"
+                + "        }";
     }
 }
